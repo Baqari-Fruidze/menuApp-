@@ -8,7 +8,9 @@ function MealsOverviewScreen({ route }) {
     (mealItem) => mealItem.categoryIds.indexOf(catId) >= 0
   );
   function renderMealItem(itemData) {
-    return <MealItem title={itemData.item.title} />;
+    return (
+      <MealItem title={itemData.item.title} imageUrl={itemData.item.imageUrl} />
+    );
   }
   return (
     <View style={styles.container}>
